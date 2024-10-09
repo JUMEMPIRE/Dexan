@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Dexan </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="root">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#" id="login">Iniciar sesion</a></li>
+                <li><a href="#" id="register">Crear cuenta</a></li>
+                <li><a href="#" id="cart">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Bienvenidos a sa</h1>
+            <p>Encuentra los mejores productos para tu salud y bienestar</p>
+            <button>Comprar ahora</button>
+        </section>
+        <section class="catalogo">
+            <h2>Catalogo de productos</h2>
+            <div class="catalogo-grid">
+                <div class="catalogo-item">
+                    <h3>Medicamentos</h3>
+                    <ul>
+                        <li><a href="#">Antibioticos</a></li>
+                        <li><a href="#">Antiinflamatorios</a></li>
+                        <li><a href="#">Antipireticos</a></li>
+                    </ul>
+                </div>
+                <div class="catalogo-item">
+                    <h3>Suplementos</h3>
+                    <ul>
+                        <li><a href="#">Vitaminas</a></li>
+                        <li><a href="#">Minerales</a></li>
+                        <li><a href="#">Proteinas</a></li>
+                    </ul>
+                </div>
+                <div class="catalogo-item">
+                    <h3>Cuidado personal</h3>
+                    <ul>
+                        <li><a href="#">Cremas</a></li>
+                        <li><a href="#">Jabones</a></li>
+                        <li><a href="#">Shampoos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="buscador">
+            <h2>Buscador de productos</h2>
+            <form>
+                <input type="text" id="buscador" placeholder="Buscar productos...">
+                <button>Buscar</button>
+            </form>
+            <div id="resultados-buscador"></div>
+        </section>
+        <section class="localizacion">
+            <h2>Localizacion en Google Maps</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d876.7091048933831!2d-75.21396945311993!3d4.43935495014348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c4ef75abdb0d%3A0x32939a48981d92a6!2sCra.%207%20%2339-109%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1726440872453!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="mapa"></div>
+        </section>
+        <section class="carrito">
+            <h2>Carrito de compras</h2>
+            <div id="carrito-content"></div>
+            <button id="checkout">Realizar pedido
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="YGNPLU2BH8TQN" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" />
+                  </form>
+            </button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Farmacia Online</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.cart {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .remove {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
